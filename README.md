@@ -7,13 +7,13 @@ De maneira simplificada, a base do jogo consiste em conectar todos os blocos, mo
 <br><img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Tower.png" width="100">
 
 •	 **Verdes** que podem ser se mover, mas não podem ser girados; 
-<img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Walk.png" width="100">
+<br><img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Walk.png" width="100">
 
 •	**Azuis** que podem apenas ser girados, mas estão fixos; 
-<img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Spin.png" width="100">
+<br><img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Spin.png" width="100">
 
 •	**Laranja** que podem girar e se mover. 
-<img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/SpinWalk.png" width="100">
+<br><img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/SpinWalk.png" width="100">
 
 O usuário escolhe uma fase a partir de um arquivo de texto e seleciona o botão de busca trazendo assim o resultado da fase selecionado.
 
