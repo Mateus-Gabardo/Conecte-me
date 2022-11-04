@@ -4,7 +4,7 @@ Desenvolvimento de algoritmo de busca em árvore (largura e profunidade) do jogo
 De maneira simplificada, a base do jogo consiste em conectar todos os blocos, movendo-os ou girando-os. Esses blocos são divididos por tipos sendo eles:
 
 •	**Vermelhos** que não podem ser girados ou movidos;
-<img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Tower.png" width="100">
+<br><img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Tower.png" width="100">
 
 •	 **Verdes** que podem ser se mover, mas não podem ser girados; 
 <img src="https://raw.githubusercontent.com/Mateus-Gabardo/Conecte-me/master/src/main/resources/images/Walk.png" width="100">
