@@ -1,5 +1,6 @@
 package View;
 
+import controller.GameBoardController;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTextField;
@@ -11,25 +12,27 @@ import javax.swing.JTextField;
 public class GameCreateLevel extends javax.swing.JFrame {
     
     private List<JTextField> textFields = new ArrayList<JTextField>();
+    GameBoardController gameController;
 
     /**
      * Creates new form GameCreateLevel
      */
-    public GameCreateLevel() {
+    public GameCreateLevel(GameBoardController gameController) {
+        this.gameController = gameController;
         initComponents();
     }
     
-    public void getMatriz() {
+    public String getLevel() {
         String txt = "";
         for (JTextField textField : textFields) {
             txt += textField.getText();
             if (textFields.size() != textFields.indexOf(textField)) {
                 txt += ",";
             }
-            System.out.println("");
         }
+        return txt;
     }
-    
+        
     private void createListTF() {
         textFields.add(tf11);
         textFields.add(tf12);
@@ -91,6 +94,11 @@ public class GameCreateLevel extends javax.swing.JFrame {
         tf33.setToolTipText("");
 
         btSalvar.setText("Salvar");
+        btSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalvarActionPerformed(evt);
+            }
+        });
 
         btCancelar.setText("Cancelar");
 
@@ -201,6 +209,10 @@ public class GameCreateLevel extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+        gameController.salvarNovaFase(getLevel());
+    }//GEN-LAST:event_btSalvarActionPerformed
 
     /**
      * @param args the command line arguments

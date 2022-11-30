@@ -1,6 +1,7 @@
 package controller;
 
 import View.GameCreateLevel;
+import dao.CreatedLevels;
 
 /**
  *
@@ -9,11 +10,19 @@ import View.GameCreateLevel;
 public class GameCreateLevelController {
     
     private GameCreateLevel createLevel;
-    
+    private CreatedLevels dao;
 
-    public GameCreateLevelController() {       
-        createLevel = new GameCreateLevel();
-        createLevel.setVisible(true);
+    public GameCreateLevelController(GameBoardController gameController) {
+        dao = new CreatedLevels();
+        createLevel = new GameCreateLevel(gameController);
     }   
+    
+    public void abrir() {
+        createLevel.setVisible(true);
+    }
+    
+    public void salvarFase(String fase) {
+        dao.addLevel(fase);
+    }
     
 }

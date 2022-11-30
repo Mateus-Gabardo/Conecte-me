@@ -27,6 +27,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import View.GameBoard;
 import View.GameResultPanel;
+import dao.CreatedLevels;
 import model.PieceModel;
 import model.SpinModel;
 import model.SpinWalkModel;
@@ -40,6 +41,8 @@ public class GameBoardController {
     private GameBoard gameBoard;
     private int[][] state;
     private GameResultPanel gameResult;
+    private GameCreateLevelController createLevel;
+    private CreatedLevels createdLevels;
 
     public GameBoardController(int countLinhas, int countColunas) {
         this.countLinhas = countLinhas;
@@ -47,6 +50,8 @@ public class GameBoardController {
         this.state = new int[countLinhas][countColunas];
         this.gameBoard = new GameBoard(this);
         this.gameResult = inicialGameResult();
+        this.createLevel = new GameCreateLevelController(this);
+        this.createdLevels = new CreatedLevels();
     }
     
     public int[][] getState(){
@@ -237,7 +242,11 @@ public class GameBoardController {
     }
 
     public void abreCriarFase() {
-        GameCreateLevelController createLevel = new GameCreateLevelController();
+        createLevel.abrir();
+    }
+
+    public void salvarNovaFase(String fase) {
+        createLevel.salvarFase(fase);
     }
 
 }

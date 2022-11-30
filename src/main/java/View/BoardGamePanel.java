@@ -2,6 +2,7 @@
 package View;
 
 import controller.GameBoardController;
+import controller.GameCreateLevelController;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;

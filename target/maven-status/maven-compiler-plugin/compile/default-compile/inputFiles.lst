@@ -17,6 +17,8 @@ C:\Users\09062732933\Git\Conecte-me\src\main\java\core\Main.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\Heuristica.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\model\WalkModel.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\core\ConectMe.java
+C:\Users\09062732933\Git\Conecte-me\src\main\java\controller\GameCreateLevelController.java
+C:\Users\09062732933\Git\Conecte-me\src\main\java\dao\CreatedLevels.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\utils\ResizedImageIconFactory.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\BuscaProfundidade.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\model\GameBoardModel.java
@@ -25,6 +27,7 @@ C:\Users\09062732933\Git\Conecte-me\src\main\java\utils\PersonalizaPiece.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\Busca.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\utils\ImageIconFactory.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\SubidaMontanha.java
+C:\Users\09062732933\Git\Conecte-me\src\main\java\View\GameCreateLevel.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\Aleatorio.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\busca\AEstrela.java
 C:\Users\09062732933\Git\Conecte-me\src\main\java\View\GameResultPanel.java

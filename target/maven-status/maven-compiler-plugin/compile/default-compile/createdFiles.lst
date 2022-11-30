@@ -1,6 +1,8 @@
 model\PieceModel.class
 utils\ResizedImageIconFactory.class
+controller\GameCreateLevelController.class
 busca\Heuristica.class
+dao\CreatedLevels.class
 utils\PersonalizaPiece.class
 model\WalkModel.class
 busca\Nodo.class
@@ -16,6 +18,7 @@ View\GameComandosPanel$3.class
 core\ConectMe.class
 busca\BuscaHeuristica.class
 View\DefaultTablePieceCellRenderer.class
+View\GameCreateLevel$1.class
 model\TowerModel.class
 utils\ResizedImageIconFactory$ResizedImageIcon.class
 View\GameResultPanel.class
@@ -24,6 +27,7 @@ busca\BuscaHeuristica$1.class
 busca\BuscaRecursiva.class
 View\GameComandosPanel$4.class
 model\SpinModel.class
+View\GameCreateLevel.class
 busca\Antecessor.class
 busca\Aleatorio.class
 busca\MostraStatusConsole.class
@@ -31,6 +35,7 @@ busca\Status.class
 busca\BuscaLargura.class
 model\SpinWalkModel.class
 View\GameComandosPanel.class
+View\GameComandosPanel$5.class
 View\BoardGamePanel.class
 busca\SubidaMontanha.class
 View\GameBoard.class
