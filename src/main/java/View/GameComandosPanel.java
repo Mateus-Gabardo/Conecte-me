@@ -65,6 +65,13 @@ public class GameComandosPanel extends JPanel{
                gameController.sobre();
           }
       }));
+      
+      this.bottoes.add(this.createButton("Criar fase", new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+               gameController.abreCriarFase();
+          }
+      }));
     }
     
     private void addComponents(){

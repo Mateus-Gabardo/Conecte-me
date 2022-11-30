@@ -235,4 +235,9 @@ public class GameBoardController {
         }
         return matriz;
     }
+
+    public void abreCriarFase() {
+        GameCreateLevelController createLevel = new GameCreateLevelController();
+    }
+
 }

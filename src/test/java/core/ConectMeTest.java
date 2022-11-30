@@ -1,6 +1,6 @@
 package core;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -16,7 +16,7 @@ public class ConectMeTest {
 				{0, 20042, 44041, 34004},//
 				{0, 30220, 22130, 13400}};
 		ConectMe conectMe = new ConectMe(fase, "Estado inicial");
-		assertTrue("Deve retornar todos os pinos conectados corretamente", conectMe.ehMeta());	
+		assertTrue(conectMe.ehMeta(), "Deve retornar todos os pinos conectados corretamente");	
 	}
 	
 	@Test
