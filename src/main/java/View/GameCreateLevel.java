@@ -20,13 +20,19 @@ public class GameCreateLevel extends javax.swing.JFrame {
     public GameCreateLevel(GameBoardController gameController) {
         this.gameController = gameController;
         initComponents();
+        createListTF();
     }
     
     public String getLevel() {
         String txt = "";
         for (JTextField textField : textFields) {
-            txt += textField.getText();
-            if (textFields.size() != textFields.indexOf(textField)) {
+            if (textField.getText().isBlank()) {
+                txt += "0";
+            } else {
+                txt += textField.getText();
+            }
+            System.out.println(textFields.indexOf(textField));
+            if (textFields.size() != textFields.indexOf(textField) + 1) {
                 txt += ",";
             }
         }
@@ -101,6 +107,11 @@ public class GameCreateLevel extends javax.swing.JFrame {
         });
 
         btCancelar.setText("Cancelar");
+        btCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCancelarActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
@@ -213,6 +224,10 @@ public class GameCreateLevel extends javax.swing.JFrame {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         gameController.salvarNovaFase(getLevel());
     }//GEN-LAST:event_btSalvarActionPerformed
+
+    private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
+        gameController.getLevels();
+    }//GEN-LAST:event_btCancelarActionPerformed
 
     /**
      * @param args the command line arguments

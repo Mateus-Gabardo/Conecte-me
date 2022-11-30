@@ -42,7 +42,6 @@ public class GameBoardController {
     private int[][] state;
     private GameResultPanel gameResult;
     private GameCreateLevelController createLevel;
-    private CreatedLevels createdLevels;
 
     public GameBoardController(int countLinhas, int countColunas) {
         this.countLinhas = countLinhas;
@@ -51,7 +50,6 @@ public class GameBoardController {
         this.gameBoard = new GameBoard(this);
         this.gameResult = inicialGameResult();
         this.createLevel = new GameCreateLevelController(this);
-        this.createdLevels = new CreatedLevels();
     }
     
     public int[][] getState(){
@@ -228,7 +226,7 @@ public class GameBoardController {
         return list;
     }
     
-    int[][] getMatrizByList(List<Integer> lista){
+    public int[][] getMatrizByList(List<Integer> lista){
         int countList = 0;
         int[][] matriz = new int[this.getRowCount()][this.getColumnCount()];
         for (int i = 0; i < matriz.length; i++){
@@ -247,6 +245,10 @@ public class GameBoardController {
 
     public void salvarNovaFase(String fase) {
         createLevel.salvarFase(fase);
+    }
+
+    public void getLevels() {
+        createLevel.getFases();
     }
 
 }

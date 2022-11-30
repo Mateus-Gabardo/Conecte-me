@@ -17,10 +17,17 @@ public class CreatedLevels {
 
     public void addLevel(String level) {
         levels.add(level);
+        System.out.println(level);
     }
 
     public List<String> getLevels() {
         return levels;
+    }
+    
+    public void printLevels() {
+        for (int i = 0; i < levels.size(); i++) {
+            System.out.println(levels.get(i));
+        }
     }
     
 }

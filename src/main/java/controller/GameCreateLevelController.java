@@ -25,4 +25,8 @@ public class GameCreateLevelController {
         dao.addLevel(fase);
     }
     
+    public void getFases() {
+        dao.printLevels();
+    }
+    
 }
