@@ -43,6 +43,9 @@ public class GameBoardController {
     private GameResultPanel gameResult;
     private GameCreateLevelController createLevel;
 
+    private CreatedLevels createdLevels;
+    private JFileChooser diretorio;
+
     public GameBoardController(int countLinhas, int countColunas) {
         this.countLinhas = countLinhas;
         this.countColunas = countColunas;
@@ -119,7 +122,7 @@ public class GameBoardController {
     }
     
     public void carregar(){
-        JFileChooser diretorio = new JFileChooser();
+        diretorio = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter(
                 "Selecione a fase inicial do jogo",
                 "txt"
@@ -203,7 +206,7 @@ public class GameBoardController {
      * @param file
      * @return 
      */
-    private List<Integer> trataFile(File file){
+    public List<Integer> trataFile(File file){
         List<Integer> list = new ArrayList<>();
         try{
            FileReader reader = new FileReader(file);
