@@ -27,6 +27,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import View.GameBoard;
 import View.GameResultPanel;
+import View.GameSelectedLevelDefine;
 import dao.CreatedLevels;
 import model.PieceModel;
 import model.SpinModel;
@@ -134,6 +135,12 @@ public class GameBoardController {
             this.setNewState(state);
             this.getGameBoard().refresh();
         }
+    }
+    
+    public void carregarPreSelecionado(File file){
+        int[][] state = this.getMatrizByList(this.trataFile(file));
+        this.setNewState(state);
+        this.getGameBoard().refresh();
     }
     
     public void buscarLargura(){
@@ -252,6 +259,11 @@ public class GameBoardController {
 
     public void getLevels() {
         createLevel.getFases();
+    }
+    
+    public void abreSelecaoFasePreProgramada(){
+        GameSelectedLevelDefine selected = new GameSelectedLevelDefine(this);
+        selected.setVisible(true);
     }
 
 }

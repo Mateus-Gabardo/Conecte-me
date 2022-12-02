@@ -72,6 +72,13 @@ public class GameComandosPanel extends JPanel{
                gameController.abreCriarFase();
           }
       }));
+      
+       this.bottoes.add(this.createButton("Selecionar Fase", new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+               gameController.abreSelecaoFasePreProgramada();
+          }
+      }));
     }
     
     private void addComponents(){
