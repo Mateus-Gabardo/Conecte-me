@@ -236,6 +236,16 @@ public class GameBoardController {
         return list;
     }
     
+    public List<Integer> trataFaseSalva(String string){
+        List<Integer> list = new ArrayList<>();
+        String[] split = string.split(",");
+        for (String word : split) {
+            if(word.trim().length() > 0 && !"".equals(word.trim()))
+                list.add(Integer.parseInt(word));
+        }
+        return list;
+    }
+    
     public int[][] getMatrizByList(List<Integer> lista){
         int countList = 0;
         int[][] matriz = new int[this.getRowCount()][this.getColumnCount()];
