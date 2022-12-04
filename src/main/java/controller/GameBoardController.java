@@ -41,6 +41,7 @@ public class GameBoardController {
     private int countColunas;
     private GameBoard gameBoard;
     private int[][] state;
+    private long tempo;
     private GameResultPanel gameResult;
     private GameCreateLevelController createLevel;
 
@@ -154,7 +155,8 @@ public class GameBoardController {
         } else {
             System.out.println(n.getProfundidade());
             System.out.println("solucao:\n" + n.montaCaminho() + "\n\n");
-            msg = "Método de Largura. Largura: " + n.getProfundidade() + " Duração: " + getTimer(ms.getStatus().getTempoDecorrido()) + ".\nNodos Visitados: " + ms.getStatus().getVisitados();
+            this.tempo = ms.getStatus().getTempoDecorrido();
+            msg = "Método de Largura. Largura: " + n.getProfundidade() + " Duração: " + getTimer(this.tempo) + ".\nNodos Visitados: " + ms.getStatus().getVisitados();
             if(n.getEstado() instanceof ConectMe ){
                 ConectMe newEstado = (ConectMe) n.getEstado();
                 this.setNewState(newEstado.getBoard());
@@ -176,7 +178,8 @@ public class GameBoardController {
         } else {
             System.out.println(n.getProfundidade());
             System.out.println("solucao:\n" + n.montaCaminho() + "\n\n");
-            msg = "Método de profundidade. Profundidade: " + n.getProfundidade() + " Duração: " + getTimer(ms.getStatus().getTempoDecorrido())  + ".\nNodos Visitados: " + ms.getStatus().getVisitados();
+            this.tempo = ms.getStatus().getTempoDecorrido();
+            msg = "Método de profundidade. Profundidade: " + n.getProfundidade() + " Duração: " + getTimer(this.tempo)  + ".\nNodos Visitados: " + ms.getStatus().getVisitados();
             if(n.getEstado() instanceof ConectMe ){
                 ConectMe newEstado = (ConectMe) n.getEstado();
                 this.setNewState(newEstado.getBoard());
@@ -191,6 +194,10 @@ public class GameBoardController {
         DateFormat formatter = new SimpleDateFormat("mm:ss:SSS");
         formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
         return formatter.format(date);
+    }
+    
+    public long getTempo() {
+        return this.tempo;
     }
     
     public void sobre(){
@@ -238,7 +245,7 @@ public class GameBoardController {
     
     public List<Integer> trataFaseSalva(String string){
         List<Integer> list = new ArrayList<>();
-        String[] split = string.split(",");
+        String[] split = string.split(", ");
         for (String word : split) {
             if(word.trim().length() > 0 && !"".equals(word.trim()))
                 list.add(Integer.parseInt(word));
@@ -267,8 +274,8 @@ public class GameBoardController {
         createLevel.salvarFase(fase);
     }
 
-    public void getLevels() {
-        createLevel.getFases();
+    public List<String> getLevels() {
+        return createLevel.getFases();
     }
     
     public void abreSelecaoFasePreProgramada(){

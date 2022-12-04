@@ -2,6 +2,7 @@ package controller;
 
 import View.GameCreateLevel;
 import dao.CreatedLevels;
+import java.util.List;
 
 /**
  *
@@ -25,8 +26,8 @@ public class GameCreateLevelController {
         dao.addLevel(fase);
     }
     
-    public void getFases() {
-        dao.printLevels();
+    public List<String> getFases() {
+        return dao.getLevels();
     }
     
 }

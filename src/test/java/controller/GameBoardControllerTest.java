@@ -7,6 +7,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
 public class GameBoardControllerTest {
@@ -39,4 +40,15 @@ public class GameBoardControllerTest {
             
             Assertions.assertThat(controller.getMatrizByList(list)).isEqualTo(valid);
         }
+        
+        
+        @Test
+        public void testTempoDaFase() throws Exception{
+            File file = new File("./src/main/resources/stages/nivel27.0.txt");
+            controller = new GameBoardController(4,4);
+            controller.carregarPreSelecionado(file);
+            controller.buscarProfundidade();
+            assertTrue(controller.getTempo() <= 30000, "Tempo abaixo do esperado de 30 seg");
+        }
+        
 }

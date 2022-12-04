@@ -17,7 +17,6 @@ public class CreatedLevels {
 
     public void addLevel(String level) {
         levels.add(level);
-        System.out.println(level);
     }
 
     public List<String> getLevels() {

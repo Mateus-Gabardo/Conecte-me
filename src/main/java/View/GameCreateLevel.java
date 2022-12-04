@@ -31,12 +31,15 @@ public class GameCreateLevel extends javax.swing.JFrame {
             } else {
                 txt += textField.getText();
             }
-            System.out.println(textFields.indexOf(textField));
             if (textFields.size() != textFields.indexOf(textField) + 1) {
-                txt += ",";
+                txt += ", ";
             }
         }
         return txt;
+    }
+    
+    public void setLevel(int pos, String valor) {
+        textFields.set(pos, new JTextField(valor));
     }
         
     private void createListTF() {
