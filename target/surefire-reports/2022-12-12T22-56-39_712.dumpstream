@@ -1,0 +1,108 @@
+# Created at 2022-12-12T22:56:39.713
+2022-12-12 22:56:39.709 java[79570:2616216] Bad JNI lookup accessibilityHitTest
+
+# Created at 2022-12-12T22:56:39.731
+2022-12-12 22:56:39.731 java[79570:2616216] (
+
+# Created at 2022-12-12T22:56:39.732
+	0   libawt_lwawt.dylib                  0x0000000121a6dc50 -[CommonComponentAccessibility accessibilityHitTest:] + 180
+
+# Created at 2022-12-12T22:56:39.732
+	1   libawt_lwawt.dylib                  0x0000000121a2a78c -[AWTView accessibilityHitTest:] + 176
+
+# Created at 2022-12-12T22:56:39.732
+	2   AppKit                              0x000000019088f7ec -[NSWindow(NSWindowAccessibility) accessibilityHitTest:] + 324
+
+# Created at 2022-12-12T22:56:39.732
+	3   AppKit                              0x0000000190428bbc -[NSApplication(NSApplicationAccessibility) accessibilityHitTest:] + 256
+
+# Created at 2022-12-12T22:56:39.732
+	4   AppKit                              0x00000001903f1ce8 CopyElementAtPosition + 152
+
+# Created at 2022-12-12T22:56:39.732
+	5   HIServices                          0x00000001925b7240 _AXXMIGCopyElementAtPosition + 444
+
+# Created at 2022-12-12T22:56:39.732
+	6   HIServices                          0x00000001925dc0f4 _XCopyElementAtPosition + 356
+
+# Created at 2022-12-12T22:56:39.733
+	7   HIServices                          0x0000000192594ba8 mshMIGPerform + 204
+
+# Created at 2022-12-12T22:56:39.733
+	8   CoreFoundation                      0x000000018ce49fc4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 60
+
+# Created at 2022-12-12T22:56:39.733
+	9   CoreFoundation                      0x000000018ce49ee4 __CFRunLoopDoSource1 + 520
+
+# Created at 2022-12-12T22:56:39.733
+	10  CoreFoundation                      0x000000018ce488d0 __CFRunLoopRun + 2264
+
+# Created at 2022-12-12T22:56:39.733
+	11  CoreFoundation                      0x000000018ce478a4 CFRunLoopRunSpecific + 612
+
+# Created at 2022-12-12T22:56:39.734
+	12  HIToolbox                           0x00000001964bb3bc RunCurrentEventLoopInMode + 292
+
+# Created at 2022-12-12T22:56:39.734
+	13  HIToolbox                           0x00000001964bb04c ReceiveNextEventCommon + 236
+
+# Created at 2022-12-12T22:56:39.734
+	14  HIToolbox                           0x00000001964baf48 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+
+# Created at 2022-12-12T22:56:39.734
+	15  AppKit                              0x00000001900a0630 _DPSNextEvent + 632
+
+# Created at 2022-12-12T22:56:39.734
+	16  AppKit                              0x000000019009f7c0 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 728
+
+# Created at 2022-12-12T22:56:39.734
+	17  libosxapp.dylib                     0x0000000101d30220 -[NSApplicationAWT nextEventMatchingMask:untilDate:inMode:dequeue:] + 144
+
+# Created at 2022-12-12T22:56:39.735
+	18  AppKit                              0x0000000190093bf0 -[NSApplication run] + 464
+
+# Created at 2022-12-12T22:56:39.735
+	19  libosxapp.dylib                     0x0000000101d2ffd8 +[NSApplicationAWT runAWTLoopWithApp:] + 208
+
+# Created at 2022-12-12T22:56:39.735
+	20  libawt_lwawt.dylib                  0x0000000121a8c674 +[AWTStarter starter:headless:] + 488
+
+# Created at 2022-12-12T22:56:39.735
+	21  libosxapp.dylib                     0x0000000101d31c50 +[ThreadUtilities invokeBlockCopy:] + 28
+
+# Created at 2022-12-12T22:56:39.735
+	22  Foundation                          0x000000018dd6cb30 __NSThreadPerformPerform + 264
+
+# Created at 2022-12-12T22:56:39.735
+	23  CoreFoundation                      0x000000018ce49a34 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+
+# Created at 2022-12-12T22:56:39.735
+	24  CoreFoundation                      0x000000018ce499c8 __CFRunLoopDoSource0 + 176
+
+# Created at 2022-12-12T22:56:39.735
+	25  CoreFoundation                      0x000000018ce49738 __CFRunLoopDoSources0 + 244
+
+# Created at 2022-12-12T22:56:39.736
+	26  CoreFoundation                      0x000000018ce4833c __CFRunLoopRun + 836
+
+# Created at 2022-12-12T22:56:39.736
+	27  CoreFoundation                      0x000000018ce478a4 CFRunLoopRunSpecific + 612
+
+# Created at 2022-12-12T22:56:39.736
+	28  libjli.dylib                        0x0000000100d2efec CreateExecutionEnvironment + 400
+
+# Created at 2022-12-12T22:56:39.736
+	29  libjli.dylib                        0x0000000100d2b1fc JLI_Launch + 1184
+
+# Created at 2022-12-12T22:56:39.736
+	30  java                                0x0000000100c77bb0 main + 408
+
+# Created at 2022-12-12T22:56:39.736
+	31  dyld                                0x000000018ca3fe50 start + 2544
+
+# Created at 2022-12-12T22:56:39.736
+)
+
+# Created at 2022-12-12T22:56:40.224
+Exception in thread "AppKit Thread" 
+
